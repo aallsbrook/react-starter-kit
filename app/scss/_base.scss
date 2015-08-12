@@ -1,0 +1,112 @@
+/* _base.scss */
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100%;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+section {
+  padding: 3rem 10%;
+  background: hsl(0, 0%, 98%);
+}
+
+section:nth-child(even) {
+  background: hsl(0, 0%, 94%);
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0 2rem;
+}
+
+p {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+a, .pseudolink {
+  color: rgb(86, 146, 171);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+a.button {
+  display: inline-block;
+  line-height: 2.5rem;
+  padding: 0 1.5rem;
+  margin-top: 1rem;
+  color: white;
+  background: #3c3c3c;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+::-webkit-input-placeholder {
+  color: #a2a2a2;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #a2a2a2;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #a2a2a2;
+}
+
+:-ms-input-placeholder {
+  color: #a2a2a2;
+}
+
+[placeholder]:-ms-input-placeholder {
+  color: #a2a2a2;
+}

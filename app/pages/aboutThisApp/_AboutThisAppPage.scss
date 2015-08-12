@@ -1,0 +1,21 @@
+/* page specific */
+
+.about-page .content-page {padding:0; margin:0}
+
+.about-page{
+}
+
+
+.about-page .aboutBackground{
+  background: url("about-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  margin-top: -1.875rem;
+}
+
+.about-page .pushThisDown {
+  padding-top: 45%;
+}
+
+.about-page .wrapper{padding: 0 1.875rem 1.250rem 1.875rem;}

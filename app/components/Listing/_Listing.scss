@@ -1,0 +1,31 @@
+.Listing {
+  padding-top: 1rem;
+}
+
+.Listing-image {
+  width: 36%;
+  display: inline-block;
+}
+
+.Listing-info {
+  border-bottom-width: 0.063rem;
+  border-bottom-color: rgba(224, 224, 224, 1);
+  border-bottom-style: solid;
+  padding-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  margin-top: auto;
+  margin-bottom: 0;
+  width: 64%;
+}
+
+.Listing-info--msrp {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  font-size: 0.9375rem;
+}
+
+.Listing-info--location, .Listing-info--color {
+  font-size: 0.875rem;
+  font-color: rgba(109, 109, 109, 1)
+}

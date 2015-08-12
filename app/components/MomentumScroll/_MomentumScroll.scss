@@ -1,0 +1,36 @@
+// Momentum Scrolling
+
+.momentumScrollingContainer {
+  overflow-x: scroll; /* 1 */
+  -webkit-overflow-scrolling: touch;
+  padding-left: 1rem;
+  padding-bottom: .5rem;
+}
+
+.momentumScrollingContainer .momentumScrollingList {
+  list-style-type: none;
+  text-align: justify;
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+
+.momentumScrollingContainer .momentumScrollingListItem {
+  //display: inline-block;
+  display: table-cell;
+  width: 9.875rem;
+  padding: 0 1.563rem 0 0;
+}
+
+.momentumScrollingContainer .momentumScrollingListItem img {
+  display: inherit;
+  padding-bottom: 0;
+}
+
+.momentumScrollingContainer .carTitle {
+  word-wrap: break-word;
+  white-space: normal;
+  width: 7.5rem;
+  margin-left: auto ;
+  margin-right: auto ;
+  text-align:center;
+}

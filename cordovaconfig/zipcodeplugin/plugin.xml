@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-zipcode" version="0.0.1">
+    <name>ZipCode</name>
+    <description>Cordova ZipCode Plugin</description>
+    <license>Proprietary</license>
+    <keywords>cordova,zip,zipcode,postal</keywords>
+    <!-- android -->
+    <platform name="android">
+        <js-module src="www/zipcode.js" name="ZipCode">
+            <clobbers target="ZipCode" />
+        </js-module>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ZipCode">
+                <param name="android-package" value="com.lmig.pm.internet.mobile.cordova.zipcode.ZipCode"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/ZipCode.java" target-dir="src/com/lmig/pm/internet/mobile/cordova/zipcode" />
+    </platform>
+</plugin>

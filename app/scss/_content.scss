@@ -1,0 +1,105 @@
+/* NOTE: elements are still in PX!! When I have final design with actual padding, margin and font-sizes I will enter the correct numbers in REM */
+
+
+/* Layout */
+.content-page{
+
+}
+
+
+/* Standard elements */
+.content-page h1{
+  font-size: 1.5rem;
+  line-height: 1.563rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: rgba(56, 56, 56, 1);
+  padding: 1rem 0 0;
+}
+
+.content-page h2{
+  font-size: 0.938rem;
+  color: rgb(56,56,56);
+  font-weight: bold;
+  padding: 0;
+  margin: 0.438rem 0 0 0;
+  letter-spacing: 0;
+}
+
+.content-page p{
+  margin: 0;
+  padding-bottom: 0.438rem;
+  font-size: 0.938rem;
+  line-height: 1.063rem;
+  color: rgb(96,96,96)
+}
+
+.content-page .subHeader{
+  font-size: 0.938rem;
+  color: rgb(56,56,56);
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0;
+}
+
+
+/* List Elements - alpha */
+.content-page ol {
+  list-style-type: lower-alpha;
+}
+
+/* List Elements - lower Roman */
+.content-page ol.lower-roman {
+  list-style-type: lower-roman;
+  padding-left: 0.938rem;
+}
+
+/* List Elements - decimal */
+.content-page ol.decimal {
+  list-style-type: decimal;
+  padding-left: 0.938rem;
+}
+
+/* List Elements - square */
+.content-page ul {
+  list-style-type: square;
+}
+
+
+
+
+
+
+.content-page li{
+  color: rgb(96,96,96);
+  // margin: 0.625rem 0 0.625rem 2.500rem;
+  margin: 0.625rem 0 0.625rem 1rem;
+}
+
+.content-page ol li {
+  color: #8BB060;
+}
+
+.content-page ol li > span {
+  color: rgb(96,96,96) !important;
+}
+
+.content-page ul li {
+  color: #8BB060;
+}
+
+.content-page ul li > span {
+  color: rgb(96,96,96) !important;
+}
+
+
+
+/* content */
+
+.content-page .lastUpdated{
+  margin: 1.563rem 0 0 0;
+  font-size: 0.813rem;
+  color: rgb(56,56,56)
+}

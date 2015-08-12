@@ -1,0 +1,8 @@
+.loading-spinner--green {
+  display: block;
+  background: transparent url('../../assets/images/loading-spinner-large-green.svg') no-repeat scroll center;
+  background-size: contain;
+  width: 2.375rem;
+  height: 2.375rem;
+  z-index: 10;
+}

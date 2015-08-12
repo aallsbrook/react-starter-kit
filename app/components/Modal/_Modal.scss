@@ -1,0 +1,30 @@
+.Modal {
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.Modal-error {
+  background-color: #ffffff;
+
+}
+
+.Modal-loading {
+  background-color: #ffffff;
+  min-height: 400px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.Modal-loading--icon {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 6rem;
+  height: 6rem;
+  transform: translate(-50%, -50%);
+  background: transparent url(../CarImage/loading-spinner-large-green.svg) no-repeat scroll center;
+  background-size: cover;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <!--<meta name="viewport" content="width=device-width" />-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+  <title><%= title %></title>
+  <link rel="apple-touch-icon" href="assets/images/favicons/apple-touch-icon-114x114-precomposed.png"/>
+  <link rel="apple-touch-icon" href="assets/images/favicons/apple-touch-icon-57x57-precomposed.png"/>
+  <link rel="apple-touch-icon" href="assets/images/favicons/apple-touch-icon-72x72-precomposed.png"/>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+
+  <style>
+    .app-loading-overlay {
+      background-color: #ffffff;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 2s linear;
+    }
+  </style>
+  <!-- TODO: Example of conditional style sheets - Pull in production -->
+  <% if (debug === 'false') { %>
+  <link type="text/css" rel="stylesheet" media="all" href="css/app.<%= version %>.css"/>
+  <% } %>
+
+
+</head>
+<body id="BodyElement" class="app-is-loading">
+<!-- cordova_insert_here -->
+<div id="app"></div>
+<div class="app-loading-overlay">&nbsp;</div>
+<script src="js/app.<%= version %>.js"></script>
+<link type="text/css" rel="stylesheet" media="all" href="css/app.<%= version %>.css"/>
+
+</body>
+</html>

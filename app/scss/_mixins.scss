@@ -1,0 +1,29 @@
+/* _mixins.scss */
+
+@mixin my-padding-mixin($some-number) {
+  padding: $some-number;
+}
+
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+    src: url("#{$file-path}.woff2") format("woff2");
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin background-image($fill1, $fill2, $fill3) {
+  background-image: -webkit-linear-gradient($fill1, $fill2, $fill3);
+  background-image: -moz-linear-gradient($fill1, $fill2, $fill3);
+  background-image: -ms-linear-gradient($fill1, $fill2, $fill3);
+  background-image: -o-linear-gradient($fill1, $fill2, $fill3);
+  background-image: linear-gradient($fill1, $fill2, $fill3);
+}

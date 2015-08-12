@@ -1,0 +1,18 @@
+// Hides fullscreen video control from video control panel
+.Video video::-webkit-media-controls-fullscreen-button {
+  display:none !important;
+}
+
+.Video-custom-controls {
+  position: absolute;
+  color: rgba(86, 146, 171, 1);
+  font-size: 0.9375rem;
+}
+
+.Video-custom-controls .close {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  z-index: 2147483647; //the maximum value for a 32-bit signed integer
+  cursor: default;
+}

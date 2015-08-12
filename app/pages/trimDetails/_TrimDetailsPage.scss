@@ -1,0 +1,86 @@
+@import "../../scss/mixins";
+
+.headerAndCarousel {
+  @include background-image(rgb(255,255,255) 0%, rgb(249,249,249) 75%,rgb(242,242,242) 100%);
+  padding-bottom: .25rem;
+  position: relative;
+}
+
+#EVOX_Attribution {
+  background: transparent url(EVOXAttribution@2x.png) no-repeat scroll 0 0;
+  background-size: 78px 13px;
+  position: absolute;
+  bottom: .625rem;
+  right: .5rem;
+  width: 78px;
+  height: 13px;
+}
+
+.TrimDetails-header {
+  text-align: center;
+}
+.TrimDetails-header h3 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: rgb(56,56,56);
+  margin-bottom: 0;
+  padding: 0.25em 0 0
+}
+
+.TrimDetails-header p {
+  font-size: 1.25rem;
+  color: rgb(109,109,109);
+  margin: 0;
+  padding: 0;
+}
+.TrimDetails-header p b {
+  color: rgb(0,0,0);
+}
+
+.trim-details-page .slick-slider {
+  margin-bottom: .4rem !important;
+}
+
+.trim-details-page .slick-slider .slick-dots {
+  position: static;
+}
+
+.insurance .DetailSection-content,
+.modelOverview .DetailSection-content {
+  padding: .875rem .5rem;
+  padding-bottom: 0;
+}
+.insurance .DetailSection-content button {
+  // float: right;
+}
+.insurance .DetailSection-content > div {
+  color: #606060;
+  font-size: .875rem;
+  line-height: 1.125;
+
+  // width: 50%;
+}
+
+.modelOverview .DetailSection-content {
+  color: #6d6d6d;
+  font-size: 1.125rem;
+}
+
+.modelOverview p {
+  margin: 0 0 .75rem;
+  padding: 0;
+}
+
+.trim-detail-left-continer {
+  width: 50%;
+  display: inline-block;
+}
+
+.trim-detail-right-continer {
+  display: inline-block;
+  width: 50%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 1rem;
+}

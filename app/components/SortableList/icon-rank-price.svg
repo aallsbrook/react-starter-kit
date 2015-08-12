@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="298 385.6 16 20.7" enable-background="new 298 385.6 16 20.7" xml:space="preserve">
+<symbol  id="drag-price_2" viewBox="-29.8 -29.8 59.6 59.6">
+	<g>
+		<g>
+			<path fill="#7AAD38" d="M-22.1,29.5l-7.4-7.4l-0.3-17.5L4.6-29.8L29.8-4.6L-4.6,29.8L-22.1,29.5z M-7.8,7.8
+				c-2.8-2.8-7.2-2.8-10,0s-2.8,7.2,0,10s7.2,2.8,10,0S-5.1,10.6-7.8,7.8z"/>
+		</g>
+	</g>
+</symbol>
+<g>
+	<g>
+		<path fill="#FFFFFF" d="M300.2,389l-1.9,1.9v4.6l8.9,8.9l6.5-6.5l-8.9-8.9H300.2z M304,394.7c-0.7,0.7-1.9,0.7-2.6,0
+			s-0.7-1.9,0-2.6s1.9-0.7,2.6,0S304.7,394,304,394.7z"/>
+	</g>
+	<g>
+		
+			<use xlink:href="#drag-price_2"  width="59.6" height="59.6" x="-29.8" y="-29.8" transform="matrix(0.2608 0 0 -0.2608 305.9699 395.3999)" overflow="visible"/>
+	</g>
+</g>
+</svg>

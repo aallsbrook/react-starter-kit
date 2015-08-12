@@ -1,0 +1,33 @@
+//@include font-face(Roboto, "../assets/fonts/roboto/Roboto-Regular", 300, normal);
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/roboto/Roboto-Medium.eot');
+  src: url('../assets/fonts/roboto/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/roboto/Roboto-Medium.woff2') format('woff'),
+  url('../assets/fonts/roboto/Roboto-Medium.ttf') format('truetype'),
+  url('../assets/fonts/roboto/Roboto-Medium.svg#RobotoMedium') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/roboto/Roboto-MediumItalic.eot');
+  src: url('../assets/fonts/roboto/Roboto-MediumItalic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/roboto/Roboto-MediumItalic.woff2') format('woff'),
+  url('../assets/fonts/roboto/Roboto-MediumItalic.ttf') format('truetype'),
+  url('../assets/fonts/roboto/Roboto-MediumItalic.svg#RobotoMediumItalic') format('svg');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/roboto/Roboto-Light.eot');
+  src: url('../assets/fonts/roboto/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/roboto/Roboto-Light.woff2') format('woff'),
+  url('../assets/fonts/roboto/Roboto-Light.ttf') format('truetype'),
+  url('../assets/fonts/roboto/Roboto-Light.svg#RobotoLight') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}

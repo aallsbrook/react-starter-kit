@@ -1,0 +1,74 @@
+.TrimsList.page {
+  padding-top: 1rem;
+}
+
+.Trim {
+  width: 100%;
+  color: rgba(0, 0, 0, 1);
+}
+
+.Trim-item {
+  display: block;
+  padding-left: 0;
+  width: 100%;
+}
+
+.Trim-item--image-and-price {
+  //align-self: center;
+  font-size: 0.813rem;
+  margin-bottom: 0;
+  text-align: center;
+  // min-width: 8rem;
+  width: 36%;
+  display: inline-block;
+}
+
+.Trim-item--price {
+  margin-top: -1rem;
+  display: inline-block;
+}
+
+.Trim-item--price-label {
+  color: rgba(56, 56, 56, 1);
+}
+
+.Trim-item--car-info {
+  width: 88%;
+}
+
+.Trim-item--car-info div:first-child {
+  margin-bottom: 0;
+}
+
+.Trim-item--name {
+  font-weight: 700;
+  font-size: 0.938rem;
+  margin: 0 0 0.250rem 0;
+}
+
+.Trim-item--content {
+  border-bottom-width: 0.063rem;
+  border-bottom-color: rgba(224, 224, 224, 1);
+  border-bottom-style: solid;
+  padding-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  margin-top: auto;
+  margin-bottom: 0;
+  width: 64%;
+
+}
+
+.Trim-item--car-info-key {
+  color: rgba(56, 56, 56, 1);
+}
+
+.Trim-item--car-info-value {
+  color: rgba(109, 109, 109, 1);
+}
+
+.Trim-item--hanging-indent {
+  font-size: 0.875rem;
+  padding-left: 0.5rem;
+  text-indent: -0.5rem;
+}

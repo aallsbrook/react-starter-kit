@@ -1,0 +1,92 @@
+.TextInput-input {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.TextInput-input input {
+  font-size: 1.000rem;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  height: 3.125rem;
+  padding: 0.438rem 0 0.438rem 1rem;
+  text-overflow: ellipsis;
+  border-radius: 0.375rem;
+  border-color: #B5B5B5;
+  color: #484848;
+  box-shadow: 0 0 0 0 rgba(42, 42, 42, .75);
+
+}
+
+.TextInput-input input:focus {
+  border-radius: 0.375rem;
+  box-shadow: 0 0 0 0.188rem #B4DDF0;
+  outline:none;
+}
+
+.TextInput-clear {
+  position: absolute;
+  right: 0;
+  top: .2rem;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.TextInput-clear .icon {
+  position: absolute;
+  left: .95rem;
+  top: .85rem;
+  width: 1rem;
+  height: 1rem;
+  background: transparent url(icon-field-clear-gray.svg) no-repeat;
+  background-size: cover;
+  opacity: .5;
+}
+
+input.error {
+  border-color: #F2DEDE;
+}
+
+.Card-content input.error {
+  box-shadow: 0 0 0 3px #F2DEDE;
+}
+
+.TextSpacer {
+  border: thin solid #F3F3F3;
+}
+
+.TextInput-error {
+  padding: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  color: #993036;
+  font-weight: bold;
+  text-align: left;
+  background-color: #F2DEDE;
+  margin-top: 0.938rem;
+  position: relative;
+}
+
+.TextInput-error::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: .5rem solid transparent;
+  border-right: .5rem solid transparent;
+  border-bottom: .5rem solid #F2DEDE;
+  position: absolute;
+  top: -.5rem;
+  left: 50%;
+  margin-left: -.25rem;
+}
+
+.TextInput-error .Warning-icon {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0 .5rem -.25rem 0;
+  background: url(notification-icon-error.svg) no-repeat;
+  background-size: cover;
+}

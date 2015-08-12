@@ -1,0 +1,100 @@
+.Card-card {
+  padding: 10px;
+  text-align: center;
+  width: 14.28%;
+  float: left;
+  display: none;
+  background-color: #ffffff;
+
+}
+
+
+.card-container {
+  border: 0.063rem solid rgba(207, 207, 207, 1);
+  box-shadow: 0.125rem 0.125rem 0.500rem rgba(0, 0, 0, 0.2);
+  min-height: 34.375rem;
+  background-color: rgba(247, 247, 247, 1);
+}
+
+.card-top-border {
+  background-color: rgba(139, 197, 63, 1);
+  height: 0.313em;
+}
+
+.PromotionPage .Card-card {
+  display: block;
+}
+.visible .Card-card {
+  display: block;
+}
+
+.Card-title {
+  padding-top: 2.063rem;
+  line-height: 1.875rem;
+  color: #8bc53f;
+  font-weight: bold;
+  font-size: 1.813rem;
+}
+
+.Card-image {
+  padding: .9375rem;
+}
+
+.Card-text {
+  padding: .9375rem;
+  font-size: 1.4rem;
+  color: rgb(96,96,96);
+  line-height: 1;
+  max-width: 14em;
+  margin: 0 auto;
+}
+
+.Card-subtext {
+  padding-top: .9375rem;
+}
+
+.Card-content {
+  padding: .9375rem;
+}
+
+.Card-footer {
+  padding-bottom: .9375rem;
+}
+
+.Card-button {
+  margin-bottom: 0;
+  padding: .9375rem;
+}
+.Card-button button {
+  width: 90%;
+}
+
+.Card-card.rank-sort .Card-button button {
+  width: 100%;
+}
+
+
+// Welcome page
+#interviewcard_0 {
+  display: block;
+}
+#interviewcard_0 .mui-paper-container {
+  padding: 5rem 0 8rem;
+}
+#interviewcard_0 .Card-text {
+  width: 82%;
+  margin: 1.5rem auto;
+}
+
+.Card-content .Checkmark {
+  background: url(../Trait/icon-traits-selected.svg) no-repeat;
+  background-size: cover;
+  width: 6rem;
+  height: 6rem;
+  margin: .75rem auto 0;
+}
+
+.Card-congratulations .Card-button .Button-content {
+  padding-left: .25rem;
+  padding-right: .25rem;
+}

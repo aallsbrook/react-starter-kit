@@ -1,0 +1,42 @@
+.DetailSection-title {
+  color: rgb(56,56,56);
+  background-color: rgb(247,247,247);
+  font-size: .875rem;
+  font-weight: 600;
+  border-top: .0625rem solid rgb(178,178,178);
+  border-bottom: .0625rem solid #b2b2b2;
+  padding: .5rem .78rem;
+  box-shadow: 0 1.75px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.063rem;
+}
+
+.DetailSection-content p {
+  color: #6d6d6d;
+  font-size: 0.875rem;
+  line-height: 1.125;
+
+}
+
+.DetailSection-content table {
+  font-size: .875rem;
+  width: 100%;
+  border-top: hidden;
+  border-bottom: hidden;
+}
+.DetailSection-content td {
+  color: rgb(56,56,56);
+  border: .0625rem solid rgb(207,207,207);
+  background-color: rgb(255,255,255);
+  padding: .25rem .78rem;
+}
+.DetailSection-content td:first-child {
+  color: rgb(78,78,78);
+  width: 33.5%;
+  background-color: rgb(250,250,250);
+}
+.DetailSection-content tr:nth-child(even) td:first-child {
+  background-color: rgb(245,245,245);
+}
+.DetailSection-content td:first-child + td {
+  width: 66.5%;
+}
