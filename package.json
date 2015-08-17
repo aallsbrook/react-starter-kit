@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "A ReactJS/Flux Starter kit that depends on Node, NPM, webpack.",
   "config": {
-    "buildDir": "./build"
+    "buildDir": "./build",
+    "devHost": "localhost",
+    "devPort": 8000
   },
   "scripts": {
-    "build": "npm run webpack",
+    "build": "NODE_ENV=production npm run webpack",
+    "start": "NODE_ENV=development node dev-server ./webpack/config",
     "test": "karma start",
-    "webpack": "webpack --config ./webpack/config"
+    "webpack": "webpack --colors --progress --config ./webpack/config"
   },
   "repository": {
     "type": "git",
@@ -47,11 +50,13 @@
     "file-loader": "^0.8.4",
     "json-loader": "^0.5.2",
     "node-sass": "^3.2.0",
+    "opn": "^3.0.2",
     "postcss-loader": "^0.5.1",
     "react-hot-loader": "^1.2.8",
     "sass-loader": "^2.0.1",
     "style-loader": "^0.12.3",
     "template-html-loader": "0.0.3",
-    "webpack": "^1.11.0"
+    "webpack": "^1.11.0",
+    "webpack-dev-server": "^1.10.1"
   }
 }

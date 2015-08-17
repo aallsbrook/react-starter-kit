@@ -16,6 +16,17 @@ var entry = {
   app: ['./app.jsx']
 };
 
+if (DEBUG) {
+  entry.app.push(
+    util.format(
+      'webpack-dev-server/client?http://%s:%d',
+      pkg.config.devHost,
+      pkg.config.devPort
+    )
+  );
+  entry.app.push('webpack/hot/dev-server');
+}
+
 var config = {
   context: path.join(__dirname, '../app'),
   cache: DEBUG,
