@@ -2,6 +2,19 @@ import './_FlyOutMenu.scss';
 import React from 'react';
 import Router from 'react-router';
 
+import { FlyOutMenuConstants } from '../ComponentConstants';
+
+
+/**
+ * The FlyOutMenu is a reusable component that provides a flyout/hamburger/etc menu to your application.
+ * It currently accepts two possible properties:
+ *
+ * side: Which side of the screen the menu should appear from (left and right only currently)
+ * type: How the menu interacts with the main content of the app. Overlay will cause the flyout menu to be
+ *  displayed on top of the main content of the app. Push will cause the main content of the app to shift
+ *  partially off the screen to make room for the menu.
+ *
+ */
 class FlyOutMenu extends React.Component {
 
   constructor (...args) {
@@ -20,6 +33,9 @@ class FlyOutMenu extends React.Component {
     );
   }
 
+  /**
+   *
+   */
   toggleShowMenu () {
     this.state.isMenuShown ? this._hideMenu() : this._showMenu();
   }
@@ -44,8 +60,8 @@ class FlyOutMenu extends React.Component {
 }
 
 FlyOutMenu.propTypes = {
-  side: React.PropTypes.oneOf(['left', 'right']).isRequired,
-  type: React.PropTypes.oneOf(['overlay', 'push'])
+  side: React.PropTypes.oneOf([FlyOutMenuConstants.Side.LEFT, FlyOutMenuConstants.Side.RIGHT]).isRequired,
+  type: React.PropTypes.oneOf([FlyOutMenuConstants.Type.OVERLAY, FlyOutMenuConstants.Type.PUSH])
 };
 
 export default FlyOutMenu;

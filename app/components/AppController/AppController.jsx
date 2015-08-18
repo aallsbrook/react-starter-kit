@@ -4,6 +4,7 @@ import Router from 'react-router';
 
 import FlyOutMenu from '../FlyOutMenu/FlyOutMenu';
 import Header from '../Header/Header';
+import { FlyOutMenuConstants } from '../ComponentConstants';
 
 import { APP_TITLE } from '../../constants/AppConstants';
 
@@ -29,7 +30,7 @@ class AppController extends React.Component {
     return (
       <div>
         <Header handleLeftClick={this._handleLeftHeaderButtonClick} title={APP_TITLE}/>
-        <FlyOutMenu ref="flyOut" side="left" type="overlay"/>
+        <FlyOutMenu ref="flyOut" side={FlyOutMenuConstants.Side.LEFT} type={FlyOutMenuConstants.Type.OVERLAY}/>
         <div className="AppController-Content">
           <RouteHandler />
         </div>
