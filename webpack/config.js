@@ -4,8 +4,8 @@ var pkg = require('../package.json');
 
 var autoprefixer = require('autoprefixer-core');
 
-var DEBUG = process.env.NODE_ENV = 'development';
-var TEST = process.env.NODE_ENV = 'test';
+var DEBUG = process.env.NODE_ENV === 'development';
+var TEST = process.env.NODE_ENV === 'test';
 
 var loaders = require('./loaders');
 var plugins = require('./plugins');
@@ -24,6 +24,7 @@ if (DEBUG) {
       pkg.config.devPort
     )
   );
+  entry.app.push('webpack/hot/dev-server');
 }
 
 var config = {

@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "NODE_ENV=production npm run webpack",
+    "clean": "rimraf $npm_package_config_buildDir && mkdir $npm_package_config_buildDir",
     "lint": "eslint --ext .js --ext .jsx ./app ./webpack && echo No linting errors.",
     "start": "NODE_ENV=development node dev-server ./webpack/config",
     "test": "NODE_ENV=test karma start",
@@ -69,6 +70,7 @@
     "phantomjs": "^1.9.18",
     "postcss-loader": "^0.5.1",
     "react-hot-loader": "^1.2.8",
+    "rimraf": "^2.4.2",
     "sass-loader": "^2.0.1",
     "sinon": "^1.15.4",
     "style-loader": "^0.12.3",
