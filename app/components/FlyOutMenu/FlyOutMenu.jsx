@@ -1,9 +1,8 @@
 import './_FlyOutMenu.scss';
+
 import React from 'react';
-import Router from 'react-router';
 
 import { FlyOutMenuConstants } from '../ComponentConstants';
-
 
 /**
  * The FlyOutMenu is a reusable component that provides a flyout/hamburger/etc menu to your application.
