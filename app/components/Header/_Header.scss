@@ -1,0 +1,17 @@
+@import "../../scss/app";
+
+.Header {
+  border-bottom-width: 1px;
+  border-color: $primary-1-color;
+  height: $header-height;
+  border-style: solid;
+  position:fixed;
+  width: 100%;
+  z-index: 10 !important;
+  background-color: white;
+  margin-top: 0 !important;
+}
+
+.Header-title {
+  text-align: center;
+}
