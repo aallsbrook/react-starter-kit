@@ -24,7 +24,6 @@ if (DEBUG) {
       pkg.config.devPort
     )
   );
-  entry.app.push('webpack/hot/dev-server');
 }
 
 var config = {
