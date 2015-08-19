@@ -13,8 +13,8 @@ class HomePage extends React.Component {
     super(...args);
 
     this.state = {
-      todoItems: TodoStore.getItems() || []
-    }
+      todoItems: TodoStore.getItems()
+    };
 
     this._handleTodoStoreChange = this._handleTodoStoreChange.bind(this);
   }
@@ -44,7 +44,7 @@ class HomePage extends React.Component {
 
   _handleTodoStoreChange () {
     this.setState({
-      todoItems: TodoStore.getItems() || []
+      todoItems: TodoStore.getItems()
     });
   }
 

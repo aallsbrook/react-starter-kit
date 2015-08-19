@@ -1,10 +1,17 @@
 import './_TodoList.scss';
 
+import Immutable from 'immutable';
 import React from 'react';
 
 import Todo from '../../components/Todo/Todo';
 
+import ImmutablePropTypes from 'react-immutable-proptypes';
+
 class TodoList extends React.Component {
+
+  shouldComponentUpdate (nextProps) {
+    return !Immutable.is(this.props.todoItems, nextProps.todoItems);
+  }
 
   render () {
     return (
@@ -16,16 +23,18 @@ class TodoList extends React.Component {
 
   _renderTodo (todoObj) {
     return (
-      <Todo key={todoObj.id} todoObj={todoObj} />
+      <Todo key={todoObj.get('id')} todoObj={todoObj} />
     );
   }
 }
 
 TodoList.propTypes = {
-  todoItems: React.PropTypes.arrayOf(React.PropTypes.shape({
-    id: React.PropTypes.number.isRequired,
-    description: React.PropTypes.string.isRequired
-  })).isRequired
+  todoItems: ImmutablePropTypes.listOf(
+    ImmutablePropTypes.contains({
+      id: React.PropTypes.number.isRequired,
+      description: React.PropTypes.string.isRequired
+    })
+  ).isRequired
 };
 
 export default TodoList;

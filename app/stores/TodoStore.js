@@ -8,6 +8,11 @@ import {
 
 class TodoStore extends _BaseStore {
 
+  constructor (...args) {
+    super (...args);
+    this.set('todoItems', []);
+  }
+
   _emitChange () {
     this.emit(TODO_ITEMS_UPDATED);
   }
@@ -21,7 +26,7 @@ class TodoStore extends _BaseStore {
   }
 
   getItems () {
-    return this.get('todoItems') || [];
+    return this.get('todoItems');
   }
 
   _setItems (items) {
