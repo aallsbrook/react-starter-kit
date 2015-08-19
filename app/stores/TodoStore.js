@@ -8,7 +8,7 @@ import {
 
 class TodoStore extends _BaseStore {
 
-  emitChange () {
+  _emitChange () {
     this.emit(TODO_ITEMS_UPDATED);
   }
 
@@ -26,7 +26,7 @@ class TodoStore extends _BaseStore {
 
   _setItems (items) {
     this.set('todoItems', items);
-    this.emitChange();
+    this._emitChange();
   }
 }
 
