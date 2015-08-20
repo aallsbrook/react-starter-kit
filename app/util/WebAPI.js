@@ -8,22 +8,12 @@ import {
 
 export default {
   getTodoItems: function () {
-    //until mock server is setup, just return some fake data here
-    return new Promise((resolve) => {
-      resolve(['Item 1', 'Item 2', 'Item 3'].map((item, i) => {
-        return {
-          id: i,
-          description: item
-        };
-      }));
-    });
-    /*
-    return this._getURL('/todoItems').then(function (responseObj) {
-      return responseObj.body.items;
+    return this._getURL('http://localhost:80/api/todoItems').then(function (responseObj) {
+      return responseObj.body;
     }, function (error) {
       throw error;
     });
-    */
+
   },
   _getURL: function (url) {
     return new Promise((resolve, reject) => {

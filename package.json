@@ -7,11 +7,19 @@
     "devHost": "localhost",
     "devPort": 8000
   },
+  "mockConfig": {
+    "mock-server-ip": "127.0.0.1",
+    "mock-server-port": 80,
+    "api": "localhost",
+    "mock-root": "/mocks/api",
+    "mock-api-root": "/api"
+  },
   "scripts": {
     "prebuild": "npm run clean",
     "build": "NODE_ENV=production npm run webpack",
     "clean": "rimraf $npm_package_config_buildDir && mkdir $npm_package_config_buildDir",
     "lint": "eslint --ext .js --ext .jsx ./app ./webpack && echo No linting errors.",
+    "mock": "node mock-server",
     "prestart": "npm install",
     "start": "NODE_ENV=development node dev-server ./webpack/config",
     "pretest": "npm install && npm run lint",
@@ -43,8 +51,11 @@
     "css-loader": "^0.16.0",
     "eslint": "^1.1.0",
     "eslint-plugin-react": "^3.2.3",
+    "express": "^4.13.3",
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
+    "glob": "^5.0.14",
+    "hostile": "^1.0.2",
     "json-loader": "^0.5.2",
     "karma": "^0.13.9",
     "karma-mocha": "^0.2.0",
