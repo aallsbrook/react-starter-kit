@@ -8,16 +8,18 @@ let { TestUtils } = React.addons;
 //we must import modules that have functions we want to stub out for testing this module/component
 import TodoStore from '../../../stores/TodoStore';
 import AppActions from '../../../actions/AppActions';
+import Utils from '../../../util/Utils';
 
 describe('HomePage', () => {
 
-  let appActionsGetTodoItems, todoStoreAddChangeListener, todoStoreRemoveChangeListener, todoStoreGetItems;
+  let appActionsGetTodoItems, todoStoreAddChangeListener, todoStoreRemoveChangeListener, todoStoreGetItems, utilsNavigateToPage;
 
   beforeEach(() => {
     appActionsGetTodoItems = sinon.stub(AppActions, 'getTodoItems');
     todoStoreAddChangeListener = sinon.stub(TodoStore, 'addChangeListener');
     todoStoreRemoveChangeListener = sinon.stub(TodoStore, 'removeChangeListener');
     todoStoreGetItems = sinon.stub(TodoStore, 'getItems').returns(Immutable.List([]));
+    utilsNavigateToPage = sinon.spy(Utils, 'navigateToPage');
   });
 
   it('Should initialize correctly', () => {
@@ -77,11 +79,26 @@ describe('HomePage', () => {
     assert.equal(todoStoreRemoveChangeListener.callCount, 1, 'todo store change listener not removed on component unmount');
   });
 
+  it('Should navigate to about page on button click', () => {
+
+    let homePage = TestUtils.renderIntoDocument(
+      <HomePage />
+    );
+
+    let buttonElement = TestUtils.findRenderedDOMComponentWithClass(homePage, 'HomePage-button');
+
+    TestUtils.Simulate.click(buttonElement);
+
+    assert.equal(utilsNavigateToPage.callCount, 1, 'navigateToPage function not called as expected');
+    assert(utilsNavigateToPage.calledWithExactly('/about'), 'navigateToPage function not called with expected value');
+  });
+
   afterEach(() => {
     appActionsGetTodoItems.restore();
     todoStoreAddChangeListener.restore();
     todoStoreRemoveChangeListener.restore();
     todoStoreGetItems.restore();
+    utilsNavigateToPage.restore();
   });
 
 });

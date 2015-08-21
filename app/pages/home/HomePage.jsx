@@ -6,6 +6,7 @@ import TodoList from '../../components/TodoList/TodoList';
 
 import AppActions from '../../actions/AppActions';
 import TodoStore from '../../stores/TodoStore';
+import Utils from '../../util/Utils';
 
 class HomePage extends React.Component {
 
@@ -38,6 +39,8 @@ class HomePage extends React.Component {
         <p>This is an example home page, powered by React, ES6 &amp; webpack.</p>
 
         <TodoList todoItems={this.state.todoItems} />
+
+        <button className="HomePage-button" onClick={this._navigateToAboutPage}>Go to About Page</button>
       </div>
     );
   }
@@ -46,6 +49,10 @@ class HomePage extends React.Component {
     this.setState({
       todoItems: TodoStore.getItems()
     });
+  }
+
+  _navigateToAboutPage () {
+    Utils.navigateToPage('/about');
   }
 
 }
