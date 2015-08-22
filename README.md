@@ -15,7 +15,7 @@ A ReactJS/Flux Starter kit for building apps with Node, NPM, ES6, webpack, and m
 * Material UI ([feature/material-ui](https://github.com/badsyntax/react-seed/tree/feature/material-ui))
 
 ## Demo
-http://lmigpiit.github.io/react-starter-kit/#/(Updated often)
+http://lmigpiit.github.io/react-starter-kit (Updated often)
 
 ### APK
 (coming soon)
