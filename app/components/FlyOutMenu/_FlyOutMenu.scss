@@ -1,4 +1,5 @@
 .FlyOutMenu {
+  display: none;
   background-color: blue;
   height: 100vh;
   width: 33%;
@@ -9,8 +10,14 @@
 
 .FlyOutMenu--left {
   left: -350px;
+  display: none;
+
 }
 
 .FlyOutMenu--display {
+  display: none;
+
   transform: translateX(350px);
 }
+
+

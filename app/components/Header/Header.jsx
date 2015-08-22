@@ -17,7 +17,9 @@ class Header extends React.Component {
     let mainNav = this.props.mainNav
     return (
       <div className="Header">
-        <div className="Header-button--left" onTouchTap={this._handleLeftButtonClick}></div>
+        <div className="Header-button--left" onTouchTap={this._handleLeftButtonClick}>
+          <svg class="mui-svg-icon" viewBox="0 0 24 24" data-reactid=".0.0.0.0.$touchRipple.1:2"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" data-reactid=".0.0.0.0.$touchRipple.1:2.0"></path></svg>
+        </div>
         <div className="Header-title" onTouchTap={this._handleTitleClick}>
           <h1 className="Header-title--text">{
             this.props.title || ''}

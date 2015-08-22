@@ -24,6 +24,16 @@ class FlyOutMenu extends React.Component {
     };
   }
 
+  componentDidMount () {
+    var overlay = document.getElementsByClassName("overlay")[0];
+    overlay.onclick = function overlayClicked() {
+      //alert("overlay clicked");
+
+      body.classList.remove("show-menu");
+
+    }
+  }
+
   render () {
     return (
       <div className={'FlyOutMenu FlyOutMenu-' + this.props.type + ' FlyOutMenu--' + this.props.side}>
@@ -41,6 +51,10 @@ class FlyOutMenu extends React.Component {
 
   _hideMenu () {
     let rootElement = React.findDOMNode(this);
+    let body = document.getElementsByTagName("body")[0];
+
+    body.classList.remove("show-menu");
+
     //add/remove needed classes here
     this.setState({
       isMenuShown: false
@@ -50,6 +64,11 @@ class FlyOutMenu extends React.Component {
   _showMenu () {
     let rootElement = React.findDOMNode(this);
     rootElement.classList.add('FlyOutMenu--display');
+
+
+    let body = document.getElementsByTagName("body")[0];
+    body.className = body.className + " show-menu";
+
     //add/remove needed classes here
     this.setState({
       isMenuShown: true
