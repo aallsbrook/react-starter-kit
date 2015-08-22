@@ -12,7 +12,6 @@ A ReactJS/Flux Starter kit for building apps with Node, NPM, ES6, webpack, and m
 * Basic flux architecture with app actions, stores and example web API usage
 * View http://imgur.com/S17tOcp for an example
 * React router ([feature/react-router](https://github.com/badsyntax/react-seed/tree/feature/react-router))
-* Material UI ([feature/material-ui](https://github.com/badsyntax/react-seed/tree/feature/material-ui))
 
 ## Demo
 http://lmigpiit.github.io/react-starter-kit (Updated often)
@@ -165,7 +164,7 @@ import './index.html';
 
 ## Credits
 
-This project was initially forked from [React seed - Material UI example](https://github.com/badsyntax/react-seed)
+This project was initially forked from [React seed - example](https://github.com/badsyntax/react-seed)
 
 ## License
 
