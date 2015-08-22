@@ -1,4 +1,4 @@
-# DO NOT USE!!! This is a WIP, we hope to have this ready on 8/17/2015.
+# DO NOT USE!!! This is a WIP - COMING SOON!
 
 ## react-starter-kit
 A ReactJS/Flux Starter kit for building apps with Node, NPM, ES6, webpack, and material-ui. As well as optional support for using Cordova to wrap your app in an executable for Android, iOS, etc.
