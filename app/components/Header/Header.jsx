@@ -13,6 +13,8 @@ class Header extends React.Component {
   }
 
   render () {
+    console.log("this.props.mainNav", this.props.mainNav);
+    let mainNav = this.props.mainNav
     return (
       <div className="Header">
         <div className="Header-button--left" onTouchTap={this._handleLeftButtonClick}></div>
@@ -22,6 +24,7 @@ class Header extends React.Component {
           </h1>
         </div>
         <div className="Header-button--right" onTouchTap={this._handleRightButtonClick}></div>
+        {mainNav}
       </div>
     );
   }

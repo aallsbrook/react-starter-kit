@@ -27,10 +27,12 @@ class AppController extends React.Component {
   }
 
   render () {
+
+    let mainNavigation = <FlyOutMenu ref="flyOut" side={FlyOutMenuConstants.Side.LEFT} type={FlyOutMenuConstants.Type.OVERLAY}/>;
+
     return (
       <div>
-        <Header handleLeftClick={this._handleLeftHeaderButtonClick} title={APP_TITLE}/>
-        <FlyOutMenu ref="flyOut" side={FlyOutMenuConstants.Side.LEFT} type={FlyOutMenuConstants.Type.OVERLAY}/>
+        <Header mainNav={mainNavigation} handleLeftClick={this._handleLeftHeaderButtonClick} title={APP_TITLE}/>
         <div className="AppController-Content">
           <RouteHandler />
         </div>
