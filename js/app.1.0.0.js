@@ -6981,7 +6981,7 @@ if(0===t.size&&0===e.size)return!0;var n=!_(t);if(b(t)){var r=t.entries();return
     t.exports = {
         name: "react-starter-kit-DEMO",
         version: "1.0.0",
-        description: "A ReactJS/Flux Starter kit that depends on Node, and webpack.",
+        description: "A Responsive, ReactJS/Flux Starter kit that depends on Node, and webpack.",
         config: {buildDir: "./build", devHost: "localhost", devPort: 8e3},
         mockConfig: {
             "mock-server-ip": "127.0.0.1",
@@ -7767,7 +7767,7 @@ if(0===t.size&&0===e.size)return!0;var n=!_(t);if(b(t)){var r=t.entries();return
                         } else Lu(n, function (e, n, o) {
                             t(i, e, r(e, n, o), o)
                         });
-                        return i
+                        return i;
                     }
                 }
 
@@ -9309,7 +9309,7 @@ if(0===t.size&&0===e.size)return!0;var n=!_(t);if(b(t)){var r=t.entries();return
                 return e.prototype = n.prototype, r.prototype = Au(n.prototype), r.prototype.constructor = r, o.prototype = Au(n.prototype), o.prototype.constructor = o, it.prototype["delete"] = Kt, it.prototype.get = Gt, it.prototype.has = Yt, it.prototype.set = Qt, Xt.prototype.push = Jt, vo.Cache = it, e.after = lo, e.ary = fo, e.assign = Ra, e.at = na, e.before = po, e.bind = ya, e.bindAll = ga, e.bindKey = ma, e.callback = Oi, e.chain = zr, e.chunk = dr, e.compact = vr, e.constant = Mi, e.countBy = ra, e.create = Xo, e.curry = _a, e.curryRight = ba, e.debounce = ho, e.defaults = Pa, e.defaultsDeep = ka, e.defer = wa, e.delay = Ea, e.difference = Vu, e.drop = yr, e.dropRight = gr, e.dropRightWhile = mr, e.dropWhile = _r, e.fill = br, e.filter = $r, e.flatten = Er, e.flattenDeep = xr, e.flow = xa, e.flowRight = Ca, e.forEach = ua, e.forEachRight = aa, e.forIn = La, e.forInRight = ja, e.forOwn = Ua, e.forOwnRight = Fa, e.functions = $o, e.groupBy = sa, e.indexBy = ca, e.initial = Sr, e.intersection = Gu, e.invert = ti, e.invoke = la, e.keys = Ba, e.keysIn = ei, e.map = to, e.mapKeys = za, e.mapValues = qa, e.matches = Ti, e.matchesProperty = Ii, e.memoize = vo, e.merge = Ia, e.method = Ja, e.methodOf = Za, e.mixin = Ri, e.modArgs = Sa, e.negate = yo, e.omit = Ha, e.once = go, e.pairs = ni, e.partial = Oa, e.partialRight = Ma, e.partition = fa, e.pick = Va, e.pluck = eo, e.property = Ni, e.propertyOf = Ai, e.pull = Dr, e.pullAt = Yu, e.range = Li, e.rearg = Da, e.reject = no, e.remove = Tr, e.rest = Ir, e.restParam = mo, e.set = oi, e.shuffle = oo, e.slice = Rr, e.sortBy = ao, e.sortByAll = da, e.sortByOrder = so, e.spread = _o, e.take = Pr, e.takeRight = kr, e.takeRightWhile = Nr, e.takeWhile = Ar, e.tap = qr,e.throttle = bo,e.thru = Hr,e.times = ji,e.toArray = Yo,e.toPlainObject = Qo,e.transform = ii,e.union = $u,e.uniq = Lr,e.unzip = jr,e.unzipWith = Ur,e.values = ui,e.valuesIn = ai,e.where = co,e.without = Ju,e.wrap = wo,e.xor = Fr,e.zip = Zu,e.zipObject = Br,e.zipWith = ta,e.backflow = Ca,e.collect = to,e.compose = Ca,e.each = ua,e.eachRight = aa,e.extend = Ra,e.iteratee = Oi,e.methods = $o,e.object = Br,e.select = $r,e.tail = Ir,e.unique = Lr,Ri(e, e),e.add = Fi,e.attempt = $a,e.camelCase = Wa,e.capitalize = li,e.ceil = ts,e.clone = Eo,e.cloneDeep = xo,e.deburr = fi,e.endsWith = pi,e.escape = hi,e.escapeRegExp = di,e.every = Xr,e.find = oa,e.findIndex = Wu,e.findKey = Na,e.findLast = ia,e.findLastIndex = Ku,e.findLastKey = Aa,e.findWhere = Jr,e.first = wr,e.floor = es,e.get = Jo,e.gt = Co,e.gte = So,e.has = Zo,e.identity = Di,e.includes = Zr,e.indexOf = Cr,e.inRange = si,e.isArguments = Oo,e.isArray = Ta,e.isBoolean = Mo,e.isDate = Do,e.isElement = To,e.isEmpty = Io,e.isEqual = Ro,e.isError = Po,e.isFinite = ko,e.isFunction = No,e.isMatch = Lo,e.isNaN = jo,e.isNative = Uo,e.isNull = Fo,e.isNumber = Bo,e.isObject = Ao,e.isPlainObject = zo,e.isRegExp = qo,e.isString = Ho,e.isTypedArray = Vo,e.isUndefined = Wo,e.kebabCase = Ka,e.last = Or,e.lastIndexOf = Mr,e.lt = Ko,e.lte = Go,e.max = ns,e.min = rs,e.noConflict = Pi,e.noop = ki,e.now = va,e.pad = vi,e.padLeft = Ga,e.padRight = Ya,e.parseInt = yi,e.random = ci,e.reduce = pa,e.reduceRight = ha,e.repeat = gi,e.result = ri,e.round = os,e.runInContext = O,e.size = io,e.snakeCase = Qa,e.some = uo,e.sortedIndex = Qu,e.sortedLastIndex = Xu,e.startCase = Xa,e.startsWith = mi,e.sum = Bi,e.template = _i,e.trim = bi,e.trimLeft = wi,e.trimRight = Ei,e.trunc = xi,e.unescape = Ci,e.uniqueId = Ui,e.words = Si,e.all = Xr,e.any = uo,e.contains = Zr,e.eq = Ro,e.detect = oa,e.foldl = pa,e.foldr = ha,e.head = wr,e.include = Zr,e.inject = pa,Ri(e, function () {
                     var t = {};
                     return Re(e, function (n, r) {
-                        e.prototype[r] || (t[r] = n);
+                        e.prototype[r] || (t[r] = n)
                     }), t
                 }(), !1),e.sample = ro,e.prototype.sample = function (t) {
                     return this.__chain__ || null != t ? this.thru(function (e) {
