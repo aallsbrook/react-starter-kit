@@ -1,7 +1,7 @@
 {
   "name": "react-starter-kit-DEMO",
   "version": "1.0.0",
-  "description": "A ReactJS/Flux Starter kit that depends on Node, and webpack.",
+  "description": "A Responsive, ReactJS/Flux Starter kit that depends on Node, and webpack.",
   "config": {
     "buildDir": "./build",
     "devHost": "localhost",
