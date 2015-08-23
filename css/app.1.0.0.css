@@ -180,8 +180,17 @@ td, th {
     padding: 0
 }
 
+.body {
+    font-size: 1pc
+}
+
 .page {
+    padding: 20px;
     padding-top: 50px
+}
+
+h1, h2 {
+    margin: 0 !important
 }
 
 .FlyOutMenu {
@@ -192,7 +201,8 @@ td, th {
     width: 236px;
     height: 100%;
     padding: 10px;
-    text-align: initial
+    text-align: initial;
+    display: none
 }
 
 .left .FlyOutMenu {
@@ -202,6 +212,7 @@ td, th {
 }
 
 .left .FlyOutMenu, .right .FlyOutMenu {
+    display: initial;
     -webkit-transition-duration: .2s;
     transition-duration: .2s;
     -webkit-transition-timing-function: ease-in;
@@ -262,8 +273,17 @@ td, th {
     margin-right: 16pc
 }
 
+.body {
+    font-size: 1pc
+}
+
 .page {
+    padding: 20px;
     padding-top: 50px
+}
+
+h1, h2 {
+    margin: 0 !important
 }
 
 .Header {
