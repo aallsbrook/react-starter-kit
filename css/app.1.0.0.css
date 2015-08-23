@@ -180,13 +180,34 @@ td, th {
     padding: 0
 }
 
+*, :after, :before {
+    box-sizing: border-box
+}
+
 .body {
     font-size: 1pc
 }
 
 .page {
     padding: 20px;
-    padding-top: 50px
+    padding-top: 3.125rem
+}
+
+h1, h2 {
+    margin: 0 !important
+}
+
+*, :after, :before {
+    box-sizing: border-box
+}
+
+.body {
+    font-size: 1pc
+}
+
+.page {
+    padding: 20px;
+    padding-top: 3.125rem
 }
 
 h1, h2 {
@@ -198,7 +219,7 @@ h1, h2 {
     top: 0;
     background-color: #000;
     color: #fff;
-    width: 236px;
+    width: 16rem;
     height: 100%;
     padding: 10px;
     text-align: initial;
@@ -206,7 +227,7 @@ h1, h2 {
 }
 
 .left .FlyOutMenu {
-    left: -16pc;
+    left: -16rem;
     -webkit-transition-property: left;
     transition-property: left
 }
@@ -220,13 +241,9 @@ h1, h2 {
 }
 
 .right .FlyOutMenu {
-    right: -16pc;
+    right: -16rem;
     -webkit-transition-property: all;
     transition-property: all
-}
-
-.header {
-    cursor: pointer
 }
 
 .show-menu .FlyOutMenu {
@@ -265,12 +282,16 @@ h1, h2 {
 }
 
 .show-menu .left .overlay {
-    margin-left: 246px
+    margin-left: 15.375rem
 }
 
 .show-menu .right .overlay {
     right: 0;
-    margin-right: 16pc
+    margin-right: 16rem
+}
+
+*, :after, :before {
+    box-sizing: border-box
 }
 
 .body {
@@ -279,7 +300,7 @@ h1, h2 {
 
 .page {
     padding: 20px;
-    padding-top: 50px
+    padding-top: 3.125rem
 }
 
 h1, h2 {
@@ -288,7 +309,7 @@ h1, h2 {
 
 .Header {
     border-bottom: 1px solid red;
-    height: 50px;
+    height: 3.125rem;
     position: fixed;
     width: 100%;
     z-index: 10 !important;
@@ -304,14 +325,15 @@ h1, h2 {
 .Header-title--text {
     text-align: center;
     margin: 0;
-    line-height: 1.5
+    line-height: 3.3;
+    font-size: 1rem
 }
 
 .Header-button {
     cursor: pointer;
     display: inline-block;
-    width: 50px;
-    height: 50px
+    width: 3.125em;
+    height: 3.125rem
 }
 
 .left .Header-button {
