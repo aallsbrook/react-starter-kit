@@ -258,7 +258,8 @@ td, th {
 }
 
 .show-menu .right .overlay {
-    right: 0
+    right: 0;
+    margin-right: 16pc
 }
 
 .page {
