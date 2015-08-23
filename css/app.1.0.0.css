@@ -266,10 +266,8 @@ td, th {
 }
 
 .Header {
-    border-bottom-width: 1px;
-    border-color: red;
+    border-bottom: 1px solid red;
     height: 50px;
-    border-style: solid;
     position: fixed;
     width: 100%;
     z-index: 10 !important;
@@ -283,7 +281,9 @@ td, th {
 }
 
 .Header-title--text {
-    text-align: center
+    text-align: center;
+    margin: 0;
+    line-height: 1.5
 }
 
 .Header-button {
