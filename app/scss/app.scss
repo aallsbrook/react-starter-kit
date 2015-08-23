@@ -1,5 +1,12 @@
 $primary-1-color: red;
-$header-height: 50px;
+$header-height: 3.125rem;
+$header-width: 3.125em;
+$main-nav-width: 16.000rem;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 
 .body {
   font-size: 16px;

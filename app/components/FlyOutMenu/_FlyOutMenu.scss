@@ -1,9 +1,11 @@
+@import "../../scss/app";
+
 .FlyOutMenu {
   position: fixed;
   top: 0;
   background-color: black;
   color: white;
-  width: 236px;
+  width: $main-nav-width;
   height: 100%;
   padding: 10px;
   text-align: initial;
@@ -21,7 +23,7 @@
   // display: block;
   display: initial;
 
-  left: -256px;
+  left: -$main-nav-width;
   -webkit-transition-property: left;
   -moz-transition-property: left;
   -o-transition-property: left;
@@ -47,7 +49,7 @@
   // display: block;
   display: initial;
 
-  right: -256px;
+  right: -$main-nav-width;
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -64,25 +66,12 @@
 }
 
 .right .FlyOutMenu {
-  // float: right;
-  //  left: initial;
 }
 
-.FlyOutMenu--left {
-  //left: -350px;
-  //  display: none;
-
-}
 
 .FlyOutMenu--display {
-  //  display: none;
-
-  //transform: translateX(350px);
 }
 
-.header {
-  cursor: pointer;
-}
 
 .main-nav {
 }
@@ -129,11 +118,11 @@
 }
 
 .show-menu .left .overlay {
-  margin-left: 246px;
+  margin-left: $main-nav-width - 0.625rem;
 }
 
 .show-menu .right .overlay {
   right: 0;
-  margin-right: 256px;
+  margin-right: $main-nav-width;
 
 }
