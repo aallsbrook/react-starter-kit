@@ -12,6 +12,8 @@ A ReactJS/Flux Starter kit for building apps with Node, NPM, ES6, and webpack. A
 * Basic flux architecture with app actions, stores and example web API usage
 * View http://imgur.com/S17tOcp for an example
 * React router ([feature/react-router](https://github.com/badsyntax/react-seed/tree/feature/react-router))
+* Mock Server
+* Hamburger Menu (Main Navigation)
 
 ## Demo
 http://lmigpiit.github.io/react-starter-kit (Updated often)
