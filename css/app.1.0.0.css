@@ -293,10 +293,10 @@ td, th {
     height: 50px
 }
 
-.Header-button.left {
+.left .Header-button {
     float: left
 }
 
-.Header-button.right {
+.right .Header-button {
     float: right
 }

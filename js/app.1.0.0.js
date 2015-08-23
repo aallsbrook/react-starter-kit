@@ -566,9 +566,12 @@ function r(t,e){if(!i.canUseDOM||e&&!("addEventListener"in document))return!1;va
         return o(e, t), i(e, [{
             key: "render", value: function () {
                 console.log("this.props.mainNav", this.props.mainNav);
-                var t = this.props.mainNav, e = "Header-button " + this.props.mainNavPosition, n = "Header " + this.props.mainNavPosition;
-                return c["default"].createElement("div", {className: n}, c["default"].createElement("div", {
+                var t = this.props.mainNav, e = "Header " + this.props.mainNavPosition;
+                return c["default"].createElement("div", {
                     className: e,
+                    id: "header"
+                }, c["default"].createElement("div", {
+                    className: "Header-button",
                     onTouchTap: this._handleLeftButtonClick
                 }, c["default"].createElement("svg", {
                     "class": "mui-svg-icon",
@@ -701,11 +704,18 @@ function r(t,e){if(!i.canUseDOM||e&&!("addEventListener"in document))return!1;va
                 return c["default"].createElement("div", {className: "page HomePage"}, c["default"].createElement("br", null), c["default"].createElement("h1", null, "Home Page"), c["default"].createElement("p", null, "This is an example home page, powered by React, ES6 & webpack."), c["default"].createElement(f["default"], {todoItems: this.state.todoItems}), c["default"].createElement("button", {
                     className: "HomePage-button",
                     onClick: this._navigateToAboutPage
-                }, "Go to About Page"))
+                }, "Go to About Page"), c["default"].createElement("br", null), c["default"].createElement("button", {
+                    className: "HomePage-button",
+                    onClick: this._ToggleButtonPostion
+                }, "Toggle Main Nav aka Hamburger Icon/Menu"))
             }
         }, {
             key: "_handleTodoStoreChange", value: function () {
                 this.setState({todoItems: v["default"].getItems()})
+            }
+        }, {
+            key: "_ToggleButtonPostion", value: function () {
+                "Header left" == document.getElementById("header").className ? document.getElementById("header").className = "Header right" : document.getElementById("header").className = "Header left"
             }
         }, {
             key: "_navigateToAboutPage", value: function () {
@@ -1173,8 +1183,7 @@ function r(t,e){if(!i.canUseDOM||e&&!("addEventListener"in document))return!1;va
     var r = n(1), o = Math.abs;
     r(r.S, "Math", {
         hypot: function (t, e) {
-            for (var n, r, i = 0, u = 0, a = arguments.length, s = 0; a > u;)n = o(arguments[u++]), n > s ? (r = s / n,
-                i = i * r * r + 1, s = n) : n > 0 ? (r = n / s, i += r * r) : i += n;
+            for (var n, r, i = 0, u = 0, a = arguments.length, s = 0; a > u;)n = o(arguments[u++]), n > s ? (r = s / n, i = i * r * r + 1, s = n) : n > 0 ? (r = n / s, i += r * r) : i += n;
             return s === 1 / 0 ? 1 / 0 : s * Math.sqrt(i)
         }
     })
@@ -2723,7 +2732,8 @@ function r(t,e){if(!i.canUseDOM||e&&!("addEventListener"in document))return!1;va
                 function fn (t) {
                     return mo(function (e, n) {
                         var r = -1, o = null == e ? 0 : n.length, i = o > 2 ? n[o - 2] : M, u = o > 2 ? n[2] : M, a = o > 1 ? n[o - 1] : M;
-                        for ("function" == typeof i ? (i = un(i, a, 5), o -= 2) : (i = "function" == typeof a ? a : M, o -= i ? 1 : 0), u && Zn(n[0], n[1], u) && (i = 3 > o ? M : i, o = 1); ++r < o;) {
+                        for ("function" == typeof i ? (i = un(i, a, 5), o -= 2) : (i = "function" == typeof a ? a : M, o -= i ? 1 : 0), u && Zn(n[0], n[1], u) && (i = 3 > o ? M : i,
+                            o = 1); ++r < o;) {
                             var s = n[r];
                             s && t(e, s, i)
                         }
@@ -4273,7 +4283,8 @@ function r(t,e){if(!i.canUseDOM||e&&!("addEventListener"in document))return!1;va
                         n = null == n ? 1 : Eu(mu(n) || 0, 0);
                         var i = this.clone();
                         return r ? i.__takeCount__ = xu(i.__takeCount__, n) : i.__views__.push({
-                            size: n, type: t + (i.__dir__ < 0 ? "Right" : "")
+                            size: n,
+                            type: t + (i.__dir__ < 0 ? "Right" : "")
                         }), i
                     }, o.prototype[t + "Right"] = function (e) {
                         return this.reverse()[t](e).reverse()
