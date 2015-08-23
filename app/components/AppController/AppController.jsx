@@ -32,7 +32,8 @@ class AppController extends React.Component {
 
     return (
       <div>
-        <Header mainNav={mainNavigation} handleLeftClick={this._handleLeftHeaderButtonClick} title={APP_TITLE}/>
+        <Header mainNavPosition="left" mainNav={mainNavigation} handleLeftClick={this._handleLeftHeaderButtonClick}
+                title={APP_TITLE}/>
         <div className="AppController-Content">
           <RouteHandler />
         </div>

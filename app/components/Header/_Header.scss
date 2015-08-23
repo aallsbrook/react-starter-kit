@@ -5,11 +5,12 @@
   border-color: $primary-1-color;
   height: $header-height;
   border-style: solid;
-  position:fixed;
+  position: fixed;
   width: 100%;
   z-index: 10 !important;
   background-color: white;
   margin-top: 0 !important;
+  text-align: center;
 }
 
 .Header-title {
@@ -20,8 +21,20 @@
   text-align: center;
 }
 
-.Header-button--left {
+.Header-button {
+  cursor: pointer;
+}
+
+.Header-button {
   display: inline-block;
   width: 50px;
   height: $header-height;
+}
+
+.Header-button.left {
+  float: left;
+}
+
+.Header-button.right {
+  float: right;
 }

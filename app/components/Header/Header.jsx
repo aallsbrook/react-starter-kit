@@ -15,9 +15,12 @@ class Header extends React.Component {
   render () {
     console.log("this.props.mainNav", this.props.mainNav);
     let mainNav = this.props.mainNav
+    let mainNavButtonCssClass = "Header-button " + this.props.mainNavPosition;
+    let headerCssClass = "Header " + this.props.mainNavPosition;
+
     return (
-      <div className="Header">
-        <div className="Header-button--left" onTouchTap={this._handleLeftButtonClick}>
+        <div className={headerCssClass}>
+          <div className={mainNavButtonCssClass} onTouchTap={this._handleLeftButtonClick}>
           <svg class="mui-svg-icon" viewBox="0 0 24 24" data-reactid=".0.0.0.0.$touchRipple.1:2"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" data-reactid=".0.0.0.0.$touchRipple.1:2.0"></path></svg>
         </div>
         <div className="Header-title" onTouchTap={this._handleTitleClick}>
@@ -25,7 +28,6 @@ class Header extends React.Component {
             this.props.title || ''}
           </h1>
         </div>
-        <div className="Header-button--right" onTouchTap={this._handleRightButtonClick}></div>
         {mainNav}
       </div>
     );
