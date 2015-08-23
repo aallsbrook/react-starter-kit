@@ -1,6 +1,15 @@
 $primary-1-color: red;
 $header-height: 50px;
 
+.body {
+  font-size: 16px;
+}
+
 .page {
+  padding: 20px;
   padding-top: $header-height;
+}
+
+h1, h2 {
+  margin: 0 !important;
 }

@@ -1,6 +1,7 @@
 import pkg from '../../package';
 
 export const APP_TITLE = pkg.name;
+export const APP_DESCRIPTION = pkg.description;
 
 export const TODO_ITEMS_GET_REQUEST = 'TODO_ITEMS_GET_REQUEST';
 export const TODO_ITEMS_GET_SUCCESS = 'TODO_ITEMS_GET_SUCCESS';
