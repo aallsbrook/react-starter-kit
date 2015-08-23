@@ -14,7 +14,7 @@ A ReactJS/Flux Starter kit for building apps with Node, NPM, ES6, and webpack. A
 * Hamburger Menu (Main Navigation)
 
 ## Demo
-http://lmigpiit.github.io/react-starter-kit (Updated often)
+http://lmigpiit.github.io/react-starter-kit
 
 ### APK
 (coming soon)
