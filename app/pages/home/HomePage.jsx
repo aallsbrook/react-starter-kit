@@ -12,69 +12,70 @@ import { APP_TITLE, APP_DESCRIPTION } from '../../constants/AppConstants';
 class HomePage extends React.Component {
 
     constructor (...args) {
-        super(...args);
+      super(...args);
 
-        this.state = {
-            todoItems: TodoStore.getItems()
-        };
+      this.state = {
+        todoItems: TodoStore.getItems()
+      };
 
-        this._handleTodoStoreChange = this._handleTodoStoreChange.bind(this);
+      this._handleTodoStoreChange = this._handleTodoStoreChange.bind(this);
     }
 
     componentDidMount () {
-        TodoStore.addChangeListener(this._handleTodoStoreChange);
-        AppActions.getTodoItems();
+      TodoStore.addChangeListener(this._handleTodoStoreChange);
+      AppActions.getTodoItems();
     }
 
     componentWillUnmount () {
-        TodoStore.removeChangeListener(this._handleTodoStoreChange);
+      TodoStore.removeChangeListener(this._handleTodoStoreChange);
     }
 
     render () {
-        return (
-            <div className="page HomePage">
-                <br></br>
+      return (
+        <div className="page HomePage">
+          <br></br>
 
-                <h1>Home Page</h1>
+          <h1>Home Page</h1>
 
-                <h2>{APP_DESCRIPTION}
-                </h2>
+          <h2>{APP_DESCRIPTION}
+          </h2>
 
-                <p>This is an example home page, powered by React, ES6 &amp; webpack.</p>
+          <p>This is an example home page, powered by React, ES6 &amp; webpack.</p>
 
-                <TodoList todoItems={this.state.todoItems}/>
+          <TodoList todoItems={this.state.todoItems}/>
 
-                <p>
-                    <button className="HomePage-button" onClick={this._navigateToAboutPage}>Go to About Page
-                    </button>
-                    <br />
-                    <button className="HomePage-button" onClick={this._ToggleButtonPostion}>Toggle Main Nav aka
-                        Hamburger
-                        Icon/Menu
-                    </button>
+          <p>
+            <button className="HomePage-button" onClick={this._navigateToAboutPage}>Go to About Page
+            </button>
+            <br />
+            <button className="HomePage-button" onClick={this._ToggleButtonPostion}>Toggle Main Nav aka
+                Hamburger
+                Icon/Menu
+            </button>
 
-                </p>
+          </p>
 
-            </div>
-        );
+        </div>
+      );
     }
 
     _handleTodoStoreChange () {
-        this.setState({
-            todoItems: TodoStore.getItems()
-        });
+      this.setState({
+        todoItems: TodoStore.getItems()
+      });
     }
 
 
     _ToggleButtonPostion () {
-        if (document.getElementById("header").className == "Header left")
-            document.getElementById("header").className = "Header right";
-        else
-            document.getElementById("header").className = "Header left";
+      if (document.getElementById('header').className == 'Header left') {
+        document.getElementById('header').className = 'Header right';
+      } else {
+        document.getElementById('header').className = 'Header left';
+      }
     }
 
     _navigateToAboutPage () {
-        Utils.navigateToPage('/about');
+      Utils.navigateToPage('/about');
     }
 
 }

@@ -8,10 +8,10 @@ describe('Header', () => {
   it('Should have the correct css class', () => {
 
     let header = TestUtils.renderIntoDocument(
-      <Header title="Testing"/>
+      <Header title="Testing" mainNavPosition="left"/>
     );
     let headerElement = React.findDOMNode(header);
-    assert.equal(headerElement.className, 'Header', 'Header class not applied to element');
+    assert.equal(headerElement.className, 'Header left', 'Header class not applied to element');
 
   });
 

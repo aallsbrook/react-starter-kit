@@ -85,7 +85,7 @@ describe('HomePage', () => {
       <HomePage />
     );
 
-    let buttonElement = TestUtils.findRenderedDOMComponentWithClass(homePage, 'HomePage-button');
+    let buttonElement = TestUtils.scryRenderedDOMComponentsWithClass(homePage, 'HomePage-button')[0];
 
     TestUtils.Simulate.click(buttonElement);
 
