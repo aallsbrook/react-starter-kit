@@ -76,10 +76,9 @@ if (files && files.length > 0) {
 
 /* Start the API mock server. */
 console.log('Application root directory: [' + applicationRoot + ']');
-console.log('Mock Api Server listening: [http://' + ipaddress + ':' + port + ']');
-
 
 app.listen(port, ipaddress);
+console.log('Mock Api Server listening: [http://' + ipaddress + ':' + port + ']');
 
 if (process.platform === 'win32') {
   var rl = require('readline').createInterface({
