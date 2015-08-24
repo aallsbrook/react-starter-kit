@@ -1,7 +1,7 @@
 var pkg = require('./package.json');
 
 /* Define some initial variables. */
-var applicationRoot = __dirname.replace(/\\/g, "/"),
+var applicationRoot = __dirname.replace(/\\/g, '/'),
   ipaddress = pkg.mockConfig['mock-server-ip'] || '127.0.0.1',
   port = pkg.mockConfig['mock-server-port'] || 80;
 
@@ -24,16 +24,16 @@ var mockRoot = applicationRoot + pkg.mockConfig['mock-root'],
   mockFilePattern = '.json',
   mockRootPattern = mockRoot + '/**/*' + mockFilePattern,
   apiRoot = pkg.mockConfig['mock-api-root'],
-  fs = require("fs"),
-  glob = require("glob");
+  fs = require('fs'),
+  glob = require('glob');
 
 /* Create Express application */
-var express = require("express");
+var express = require('express');
 var app = express();
 
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   next();
 });
 
@@ -76,25 +76,24 @@ if (files && files.length > 0) {
 
 /* Start the API mock server. */
 console.log('Application root directory: [' + applicationRoot + ']');
-console.log('Mock Api Server listening: [http://' + ipaddress + ':' + port + ']');
-
 
 app.listen(port, ipaddress);
+console.log('Mock Api Server listening: [http://' + ipaddress + ':' + port + ']');
 
-if (process.platform === "win32") {
-  var rl = require("readline").createInterface({
+if (process.platform === 'win32') {
+  var rl = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout
   });
 
-  rl.on("SIGINT", function () {
-    process.emit("SIGINT");
+  rl.on('SIGINT', function () {
+    process.emit('SIGINT');
   });
 }
 
 //graceful shutdown
-process.on("SIGINT", function () {
-  console.log("Caught interrupt signal");
+process.on('SIGINT', function () {
+  console.log('Caught interrupt signal');
   // remove api from hosts file
   hostile.remove('127.0.0.1', apiHost, function (err) {
     if (err) {
@@ -109,4 +108,3 @@ process.on("SIGINT", function () {
   })
 
 });
-

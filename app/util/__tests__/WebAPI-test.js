@@ -1,86 +1,48 @@
-/*eslint no-undef:0*/
-
-import 'babel-core/polyfill';
 import WebAPI from '../WebAPI.js';
 import { assert } from 'chai';
-import PromotionsActions from '../../actions/PromotionsActions';
-import Util from '../Util.js';
+
+import todoItemsMockResponse from '../../../mocks/api/todoItems.json';
 
 describe('WebAPI', () => {
 
-  let clock, determineAPIURLMock, getPromoActionMock, getQueryStringValueOfKeyMock;
+  let getURLMock;
 
   beforeEach(() => {
-    clock = sinon.useFakeTimers();
-    determineAPIURLMock = sinon.stub(WebAPI, '_determineAPIURL').returns('testingURL');
-    getPromoActionMock = sinon.stub(PromotionsActions, 'getPromotions');
-    getQueryStringValueOfKeyMock = sinon.stub(Util, 'getQueryStringValueOfKey').returns('123');
+    getURLMock = sinon.stub(WebAPI, '_getURL');
   });
 
-  it('Should call getItems successfully', function (done) {
-    WebAPI.getItems().then(function (response) {
-      assert.equal(response.length, 3, 'Incorrect number of items returned');
+  it('Should call getTodoItems successfully', function (done) {
+
+    getURLMock.returns(new Promise((resolve, reject) => {
+      resolve({body: todoItemsMockResponse});
+    }));
+
+    WebAPI.getTodoItems().then(function (response) {
+      assert.deepEqual(response, todoItemsMockResponse, 'did not receive expected mock server response');
       done();
     }, function (error) {
       done(error);
     });
   });
 
-  it('Should call getPromotions successfully', function (done) {
+  it('Should handle getTodoItems errors', function (done) {
 
-    let promoResponse = {
-      body: {
-        data: [{
-          asdf: 'asdf'
-        }]
-      }
-    };
-
-    let getURLMock = sinon.stub(WebAPI, '_getURL').returns(new Promise((resolve) => {
-      resolve(promoResponse);
+    let errorMessage = 'Testing getTodoItems Error handling';
+    getURLMock.returns(new Promise((resolve, reject) => {
+      let error = new Error(errorMessage);
+      reject(error);
     }));
 
-    WebAPI.getPromotions('123').then(function (response) {
-      assert.equal(response, promoResponse.body.data, 'getPromotions return value not as expected');
+    WebAPI.getTodoItems().then(function () {
+      assert.fail(null, null, 'getToDoItems promise resolved even though an error was thrown');
+    }, function (error) {
+      assert.equal(error.message, errorMessage, 'Error not passed to reject function of promise');
       done();
-    });
-
-    getURLMock.restore();
-  });
-
-  it('Should handle retry correctly in getPromotions', function (done) {
-
-    let promoRetryResponse = {
-      body: {
-        retry: {
-          status: 'retry',
-          seconds: 1
-        }
-      },
-      req: {
-        url: 'testingURL'
-      }
-    };
-
-    let getURLMock = sinon.stub(WebAPI, '_getURL').returns(new Promise((resolve) => {
-      resolve(promoRetryResponse);
-    }));
-
-    WebAPI.getPromotions('123').then(function () {
-      clock.tick(1000);
-      assert.equal(getPromoActionMock.callCount, 1, 'getPromotions action not called again when retry response given');
-      done();
-    });
-
-    getURLMock.restore();
-
+    })
   });
 
   afterEach(() => {
-    clock.restore();
-    determineAPIURLMock.restore();
-    getPromoActionMock.restore();
-    getQueryStringValueOfKeyMock.restore();
-  });
+    getURLMock.restore();
+  })
 
 });

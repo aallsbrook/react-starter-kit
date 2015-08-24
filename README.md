@@ -1,26 +1,24 @@
-# DO NOT USE!!! This is a WIP, we hope to have this ready on 8/17/2015.
-
-## react-starter-kit
-A ReactJS/Flux Starter kit for building apps with Node, NPM, ES6, webpack, and material-ui. As well as optional support for using Cordova to wrap your app in an executable for Android, iOS, etc.
+# react-starter-kit
+A Responsive, ReactJS/Flux Starter kit for building apps with Node, NPM, ES6, and webpack. As well as optional support for using Cordova to wrap your app in an executable for Android, iOS, etc.
 
 ## What you get
 
 * React 0.13
+* Responsive
 * Compilation of ES6 & JSX to ES5
 * webpack module loader with react hot loader (as well as html, css & sass loaders)
 * Karma, mocha, chai & sinon for testing
 * Basic flux architecture with app actions, stores and example web API usage
 * View http://imgur.com/S17tOcp for an example
 * React router ([feature/react-router](https://github.com/badsyntax/react-seed/tree/feature/react-router))
-* Material UI ([feature/material-ui](https://github.com/badsyntax/react-seed/tree/feature/material-ui))
+* Mock Server
+* Hamburger Menu (Main Navigation)
 
 ## Demo
-http://lmig.dvia.com.s3-website-us-east-1.amazonaws.com/carzen/build-staging
-(Updated often)
+http://lmigpiit.github.io/react-starter-kit
 
 ### APK
-http://lmig.dvia.com.s3-website-us-east-1.amazonaws.com/carzen/build-staging/android-debug.apk
-(Updated often)
+(coming soon)
 
 ## Getting started
 
@@ -167,7 +165,7 @@ import './index.html';
 
 ## Credits
 
-This project was initially forked from [React seed - Material UI example](https://github.com/badsyntax/react-seed)
+This project was initially forked from [React seed - example](https://github.com/badsyntax/react-seed)
 
 ## License
 

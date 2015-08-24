@@ -1,13 +1,11 @@
-'use strict';
-
 import { EventEmitter } from 'events';
-import { Map, List } from 'immutable';
+import Immutable from 'immutable';
 
 /**
  * A general store that all other stores can extend from. This store leverages immutable-js
  * so anything extending this will inherit that functionality if the provided methods are used.
  */
-export default class BaseStore extends EventEmitter {
+export default class _BaseStore extends EventEmitter {
 
   /**
    *Initialize our blank Immutable Map to use within store
@@ -15,7 +13,7 @@ export default class BaseStore extends EventEmitter {
    */
   constructor (...args) {
     super(...args);
-    this.data = Map({});
+    this.data = Immutable.Map({});
   }
 
   /**
@@ -28,21 +26,14 @@ export default class BaseStore extends EventEmitter {
   }
 
   /**
-   * Set the value of a specific key for this store. since .set doesn't seem to convert JS Objects
-   * and arrays to Immutable Maps/List, this function handles that. If it's an array you must
-   * provide the 3rd param as true.
+   * Set the value of a specific key for this store. Also converts JavaScript Arrays to ImmutableJS Lists, and Objects
+   * to ImmutableJS Maps.
    * @param key
    * @param value
-   * @param isArray (optional)
    */
-  set (key, value, isArray) {
-    if (isArray) {
-      value = List(value);
-    } else if (typeof value === 'object') {
-      value = Map(value);
-    }
+  set (key, value) {
+    value = Immutable.fromJS(value);
     this.data = this.data.set(key, value);
-    this.emitChange();
   }
 
   /**
@@ -51,8 +42,6 @@ export default class BaseStore extends EventEmitter {
    */
   remove (key) {
     this.data = this.data.delete(key);
-    this.emitChange();
   }
-
 
 }

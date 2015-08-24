@@ -1,59 +1,82 @@
-'use strict';
-
 import './_HomePage.scss';
+
 import React from 'react';
-import Router from 'react-router';
 
-import Button from '../../components/Button/Button';
+import TodoList from '../../components/TodoList/TodoList';
 
-import { ButtonConstants } from '../../components/ComponentConstants';
-
-var Link = Router.Link;
+import AppActions from '../../actions/AppActions';
+import TodoStore from '../../stores/TodoStore';
+import Utils from '../../util/Utils';
+import { APP_TITLE, APP_DESCRIPTION } from '../../constants/AppConstants';
 
 class HomePage extends React.Component {
 
-  constructor () {
-    super();
-    this.state = {trimID: '15170112'};
-  }
+    constructor (...args) {
+      super(...args);
 
-  handleChange (event) {
-    this.setState({trimID: event.target.value});
-  }
+      this.state = {
+        todoItems: TodoStore.getItems()
+      };
 
-  handleButtonClick () {
-    window.location.hash = 'trims/' + this.state.trimID;
-  }
+      this._handleTodoStoreChange = this._handleTodoStoreChange.bind(this);
+    }
 
-  render () {
-    return (
-      <div className={'home-page page'}>
-        <br></br>
+    componentDidMount () {
+      TodoStore.addChangeListener(this._handleTodoStoreChange);
+      AppActions.getTodoItems();
+    }
 
-        <h1>Home Page</h1>
+    componentWillUnmount () {
+      TodoStore.removeChangeListener(this._handleTodoStoreChange);
+    }
 
-        <p>This is an example home page, powered by React, ES6 &amp; webpack.</p>
+    render () {
+      return (
+        <div className="page HomePage">
+          <br></br>
 
-        <p>Test Server Down Error Handling:</p>
+          <h1>Home Page</h1>
 
-        <p><Link to='/trims/15170112/serverdown'>Fetch trims without a server</Link></p>
+          <h2>{APP_DESCRIPTION}
+          </h2>
 
-        <p><Link to='/recommended'>Go to recommended Page</Link></p>
+          <p>This is an example home page, powered by React, ES6 &amp; webpack.</p>
 
-        <p><Link to='/interview'>Go to interview process</Link></p>
+          <TodoList todoItems={this.state.todoItems}/>
 
-        <p><Link to='/promotion'>Go to promotion process</Link></p>
+          <p>
+            <button className="HomePage-button" onClick={this._navigateToAboutPage}>Go to About Page
+            </button>
+            <br />
+            <button className="HomePage-button" onClick={this._ToggleButtonPostion}>Toggle Main Nav aka
+                Hamburger
+                Icon/Menu
+            </button>
 
-        <p>Enter an ID to view a trim page:</p>
-        <input type="text" defaultValue={this.state.trimID} onChange={this.handleChange.bind(this)}/>
-        <br></br>
-        <Button buttonType={ButtonConstants.Type.LARGE_SECONDARY}
-                buttonText="Navigate to Trim Page"
-                onClick={this.handleButtonClick.bind(this)}/>
+          </p>
 
-      </div>
-    );
-  }
+        </div>
+      );
+    }
+
+    _handleTodoStoreChange () {
+      this.setState({
+        todoItems: TodoStore.getItems()
+      });
+    }
+
+
+    _ToggleButtonPostion () {
+      if (document.getElementById('header').className == 'Header left') {
+        document.getElementById('header').className = 'Header right';
+      } else {
+        document.getElementById('header').className = 'Header left';
+      }
+    }
+
+    _navigateToAboutPage () {
+      Utils.navigateToPage('/about');
+    }
 
 }
 
