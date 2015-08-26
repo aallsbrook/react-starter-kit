@@ -29,6 +29,9 @@
     "test-jenkins": "NODE_ENV=test karma start karma.jenkins.conf.js --single-run",
     "webpack": "webpack --colors --progress --config ./webpack/config"
   },
+  "pre-commit": [
+    "test-jenkins"
+  ],
   "dependencies": {
     "core-js": "^1.0.1",
     "es6-promise": "^3.0.2",
@@ -73,6 +76,7 @@
     "opn": "^3.0.2",
     "phantomjs": "^1.9.18",
     "postcss-loader": "^0.5.1",
+    "pre-commit": "^1.1.1",
     "react-hot-loader": "^1.2.8",
     "rimraf": "^2.4.2",
     "sass-loader": "^2.0.1",
