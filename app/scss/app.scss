@@ -1,7 +1,13 @@
+//main color variables
 $primary-1-color: red;
+
+//header variables
 $header-height: 3.125rem;
-$header-width: 3.125em;
-$main-nav-width: 16.000rem;
+$header-button-height: 2rem;
+$header-button-width: 2rem;
+
+//FlyOutMenu variables
+$flyoutmenu-width: 16.000rem;
 
 *, *:before, *:after {
   box-sizing: border-box;

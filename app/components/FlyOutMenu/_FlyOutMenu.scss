@@ -5,50 +5,43 @@
   top: 0;
   background-color: black;
   color: white;
-  width: $main-nav-width;
+  width: $flyoutmenu-width;
   height: 100%;
   padding: 10px;
   text-align: initial;
   display: none;
-
+  z-index: 1001;
 }
 
-.left .FlyOutMenu {
+.FlyOutMenu-left {
   display: initial;
-  left: -$main-nav-width;
+  left: -$flyoutmenu-width;
   transition-property: left;
   transition-duration: .2s;
   transition-timing-function: ease-in;
 }
 
-.right .FlyOutMenu {
+.FlyOutMenu-right {
   display: initial;
-  right: -$main-nav-width;
+  right: -$flyoutmenu-width;
   transition-property: all;
   transition-duration: .2s;
   transition-timing-function: ease-in;
 }
 
-.FlyOutMenu--display {
-}
-
-
-.main-nav {
-}
-
-.show-menu .FlyOutMenu {
+.FlyOutMenu-display {
   z-index: 1001;
 }
 
-.show-menu .left .FlyOutMenu {
+.FlyOutMenu-display.FlyOutMenu-left {
   left: 0;
 }
 
-.show-menu .right .FlyOutMenu {
+.FlyOutMenu-display.FlyOutMenu-right {
   right: 0;
 }
 
-.overlay {
+.FlyOutMenu-overlay {
   display: none;
   background-color: gray;
   width: 100%;
@@ -56,33 +49,24 @@
   position: fixed;
   top: -10000;
   opacity: 0;
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: .3s;
-  -moz-transition-duration: .3s;
-  -o-transition-duration: .3s;
   transition-duration: .3s;
-  -webkit-transition-timing-function: ease-in;
-  -moz-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
 
-.show-menu .overlay {
+.FlyOutMenu-display .FlyOutMenu-overlay {
   opacity: 0.4;
   top: 0;
   z-index: 1000;
   display: block;
 }
 
-.show-menu .left .overlay {
-  margin-left: $main-nav-width - 0.625rem;
+.FlyOutMenu-overlay--left {
+  margin-left: $flyoutmenu-width;
+  left: 0;
 }
 
-.show-menu .right .overlay {
+.FlyOutMenu-overlay--right {
   right: 0;
-  margin-right: $main-nav-width;
-
+  margin-right: $flyoutmenu-width;
 }

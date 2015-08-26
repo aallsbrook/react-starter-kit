@@ -48,11 +48,6 @@ class HomePage extends React.Component {
             <button className="HomePage-button" onClick={this._navigateToAboutPage}>Go to About Page
             </button>
             <br />
-            <button className="HomePage-button" onClick={this._ToggleButtonPostion}>Toggle Main Nav aka
-                Hamburger
-                Icon/Menu
-            </button>
-
           </p>
 
         </div>
@@ -63,15 +58,6 @@ class HomePage extends React.Component {
       this.setState({
         todoItems: TodoStore.getItems()
       });
-    }
-
-
-    _ToggleButtonPostion () {
-      if (document.getElementById('header').className == 'Header left') {
-        document.getElementById('header').className = 'Header right';
-      } else {
-        document.getElementById('header').className = 'Header left';
-      }
     }
 
     _navigateToAboutPage () {
