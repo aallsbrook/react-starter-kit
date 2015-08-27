@@ -1,4 +1,5 @@
 # react-starter-kit
+
 A Responsive, ReactJS/Flux Starter kit for building apps with Node, NPM, ES6, and webpack. As well as optional support for using Cordova to wrap your app in an executable for Android, iOS, etc.
 
 ## What you get
