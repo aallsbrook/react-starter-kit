@@ -1,0 +1,55 @@
+@import "../../scss/app";
+
+.Header {
+  //border-bottom-width: 1px;
+  //border-color: $primary-1-color;
+  //border-style: solid;
+
+  border-bottom: 1px solid $primary-1-color;
+
+  height: $header-height;
+  position: fixed;
+  width: 100%;
+  z-index: 10 !important;
+  background-color: white;
+  margin-top: 0 !important;
+  text-align: center;
+}
+
+.Header-title {
+  display: inline-block;
+}
+
+.Header-title--text {
+  text-align: center;
+  margin: 0;
+  line-height: 3.3;
+  font-size: 1rem;
+}
+
+.Header-button {
+  cursor: pointer;
+}
+
+.Header-button {
+  display: inline-block;
+  height: $header-button-height;
+  width: $header-button-width;
+  margin-top: .5rem;
+}
+
+.Header-button--left {
+  float: left;
+  background-image: url('menu.svg');
+  background-position: center;
+  background-size: contain;
+  margin-left: .5rem;
+}
+
+.Header-button--right {
+  float: right;
+  background-image: url('menu.svg');
+  background-position: center;
+  background-size: contain;
+  margin-right: .5rem;
+}
