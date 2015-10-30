@@ -1,6 +1,8 @@
 import './_FlyOutMenu.scss';
 
 import React from 'react';
+import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 
 import { FlyOutMenuConstants } from '../ComponentConstants';
 
@@ -42,7 +44,7 @@ class FlyOutMenu extends React.Component {
   }
 
   _hideMenu () {
-    let rootElement = React.findDOMNode(this);
+    let rootElement = ReactDOM.findDOMNode(this);
     rootElement.classList.remove('FlyOutMenu-display');
     this.setState({
       isMenuShown: false
@@ -50,7 +52,7 @@ class FlyOutMenu extends React.Component {
   }
 
   _showMenu () {
-    let rootElement = React.findDOMNode(this);
+    let rootElement = ReactDOM.findDOMNode(this);
     rootElement.classList.add('FlyOutMenu-display');
     this.setState({
       isMenuShown: true

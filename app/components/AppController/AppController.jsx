@@ -1,6 +1,7 @@
 import './_AppController.scss';
 import React from 'react';
-import Router from 'react-router';
+import { Router, Route, Link } from 'react-router';
+import { render } from 'react-dom';
 
 import FlyOutMenu from '../FlyOutMenu/FlyOutMenu';
 import Header from '../Header/Header';
@@ -8,7 +9,6 @@ import { FlyOutMenuConstants } from '../ComponentConstants';
 
 import { APP_TITLE } from '../../constants/AppConstants';
 
-var RouteHandler = Router.RouteHandler;
 
 class AppController extends React.Component {
 
@@ -58,7 +58,7 @@ class AppController extends React.Component {
         </FlyOutMenu>
 
         <div className="AppController-Content">
-          <RouteHandler />
+          {this.props.children}
         </div>
 
       </div>
