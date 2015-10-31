@@ -4,7 +4,7 @@ A Responsive, ReactJS/Flux Starter kit for building apps with Node, NPM, ES6, an
 
 ## What you get
 
-* React 0.13
+* React 0.14
 * Responsive
 * Compilation of ES6 & JSX to ES5
 * webpack module loader with react hot loader (as well as html, css & sass loaders)
