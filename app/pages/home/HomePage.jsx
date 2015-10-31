@@ -1,6 +1,7 @@
 import './_HomePage.scss';
 
 import React from 'react';
+import { render } from 'react-dom';
 
 import TodoList from '../../components/TodoList/TodoList';
 
@@ -41,6 +42,12 @@ class HomePage extends React.Component {
           </h2>
 
           <p>This is an example home page, powered by React, ES6 &amp; webpack.</p>
+
+          <p>Check out the Getting Started Wiki&nbsp;
+            <a href="https://github.com/lmigpiit/react-starter-kit/wiki/Getting-Started-Guide" target="_blank">here</a>!
+          </p>
+
+          <p>To see an example of the API run the mock server; <span className="code">sudo npm run mock</span>.</p>
 
           <TodoList todoItems={this.state.todoItems}/>
 

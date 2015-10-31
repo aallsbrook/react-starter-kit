@@ -4,21 +4,23 @@ import 'normalize.css/normalize.css';
 import './scss/app.scss';
 
 import React from 'react';
+import { render } from 'react-dom'
+import { Router, Route, Link, IndexRoute } from 'react-router'
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import Router from 'react-router';
-import AppRoutes from './app-routes.jsx';
 injectTapEventPlugin();
 
-Router
-  // Runs the router, similiar to the Router.run method. You can think of it as an
-  // initializer/constructor method.
-  .create({
-    routes:         AppRoutes,
-    scrollBehavior: Router.ScrollToTopBehavior
-  })
-  // This is our callback function, whenever the url changes it will be called again.
-  // Handler: The ReactComponent class that will be rendered
-  .run(function (Handler) {
-    React.render(<Handler/>, document.getElementById('app'));
-  });
+import AppController from './components/AppController/AppController';
+import AboutPage from './pages/about/AboutPage';
+import HomePage from './pages/home/HomePage';
+
+render((
+  <Router>
+    <Route path="/" component={AppController}>
+      <IndexRoute component={HomePage}/>
+      <Route path="about" component={AboutPage}/>
+    </Route>
+  </Router>
+), document.getElementById('app'));
+
+

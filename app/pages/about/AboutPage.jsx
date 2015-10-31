@@ -1,6 +1,7 @@
 import './_AboutPage.scss';
 
 import React from 'react';
+import { render } from 'react-dom';
 
 class AboutPage extends React.Component {
 
